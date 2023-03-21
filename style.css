@@ -1,0 +1,103 @@
+.d-flex {
+    display: flex;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.bgc{
+    background-color: coral;
+}
+.head_text {
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 38px;
+    font-weight: 600;
+    font-style: normal;
+    padding-top: 140px;
+}
+.head_forms{
+    justify-content: space-around;
+    padding-bottom: 190px;
+    margin-top: 80px;
+}
+.wrapper {
+    justify-content: space-around;
+    padding: 20px 100px;
+    border: 2px solid white;
+    border-radius: 16px;
+    box-shadow: 0 0 20px #a1624b;
+}
+.text_form{
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+}
+.validate_box{
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+.meaning{
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    border: 2px solid dimgray;
+    height: 28px;
+    width: 200px;
+    margin-left: 52px;
+}
+#login.valid {
+    border-color: green;
+}
+#email.valid{
+    border-color: green;
+}
+#password.valid{
+    border-color: green;
+}
+#login.unvalid{
+    border-color: red;
+}
+#email.unvalid{
+    border-color: red;
+}
+#password.unvalid {
+    border-color: red;
+}
+.meaning_password{
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    border: 2px solid dimgray;
+    height: 28px;
+    width: 200px;
+    margin-left: 10px;
+}
+.btn {
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: cadetblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    border-radius: 10px;
+    border: 1px solid wheat;
+    color: black;
+}
+.btn:hover {
+    cursor: pointer;
+    background-color: aqua;
+}
+.info_box{
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: 26px;
+}
+.info_box:nth-child(3n) {
+    margin-bottom: 0;
+}

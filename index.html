@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation form</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container bgc">
+        <h1 class="head_text d-flex">Validate form</h1>
+        <div class="head_forms d-flex">
+            <div class="wrapper">
+                <form class="form" id="form" action="#">
+                    <div class="validate_box d-flex">
+                        <span class="text_form d-flex">Your login:</span>
+                        <input id="login" type="text" class="meaning" name="login" placeholder="Please enter your login" onchange="validate()">
+                    </div>
+                    <div class="validate_box d-flex">
+                        <span class="text_form d-flex">Your email:</span>
+                        <input id="email" type="text" class="meaning" name="email" placeholder="Please enter your email" onchange="validate()">
+                    </div>
+                    <div class="validate_box d-flex">
+                        <span class="text_form d-flex">Your password:</span>
+                        <input id="password" type="password" class="meaning_password" name="password" placeholder="Please enter your password" onchange="validate()">
+                    </div>
+                    <button class="btn d-flex" type="button" onchange="validate()">Send data</button>
+                </form>
+            </div>
+            <div class="wrapper">
+                <div class="info_box d-flex" id="info_login">
+                    <p >Please enter your login</p>
+                </div>
+                <div class="info_box d-flex" id="info_email">
+                    <p > Please enter your email</p>
+                </div>
+                <div class="info_box d-flex" id="info_password">
+                    <p >Please enter your password</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./library-of-validation.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
