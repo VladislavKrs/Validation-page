@@ -11,7 +11,7 @@ function validate() {
     if (validateLogin(loginVal, patternLogin, minLength, maxLength)) {
         inputLogin.classList.add("valid")
         inputLogin.classList.remove("unvalid")
-        loginInfo.innerHTML = `<p>Everything is fine</p>`
+        loginInfo.innerHTML = `<p>Everything is fine</p><a href="https://github.com/VladislavKrs/library-validations">My repositories</a>`
     } else {
         inputLogin.classList.add("unvalid")
         inputLogin.classList.remove("valid")
@@ -32,7 +32,7 @@ function validate() {
     if (validateLogin(emailVal, patternEmail)) {
         inputEmail.classList.add("valid")
         inputEmail.classList.remove("unvalid")
-        emailInfo.innerHTML = `<p>Email is eligible</p>`
+        emailInfo.innerHTML = `<p>Email is eligible</p><a href="https://github.com/VladislavKrs/library-validations">My repositories</a>`
     } else {
         inputEmail.classList.add("unvalid")
         inputEmail.classList.remove("valid")
@@ -53,7 +53,7 @@ function validate() {
     if (validateLogin(passwordVal, patternPassword)) {
         inputPassword.classList.add("valid")
         inputPassword.classList.remove("unvalid")
-        passwordInfo.innerHTML = `<p>Thank you for the entered password</p>`
+        passwordInfo.innerHTML = `<p>Thank you for the entered password</p><a href="https://github.com/VladislavKrs/library-validations">My repositories</a>`
     } else {
         inputPassword.classList.add("unvalid")
         inputPassword.classList.remove("valid")
