@@ -29,7 +29,7 @@ function validate() {
     const inputEmail = document.querySelector('#email')
     const patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-    if (validateLogin(emailVal, patternEmail)) {
+    if (validateEmail(emailVal, patternEmail)) {
         inputEmail.classList.add("valid")
         inputEmail.classList.remove("unvalid")
         emailInfo.innerHTML = `<p>Email is eligible</p><a href="https://github.com/VladislavKrs/library-validations">My repositories</a>`
@@ -50,7 +50,7 @@ function validate() {
     const inputPassword = document.querySelector('#password')
     const patternPassword = /[a-zA-Z0-9]+/;
 
-    if (validateLogin(passwordVal, patternPassword)) {
+    if (validatePassword(passwordVal, patternPassword)) {
         inputPassword.classList.add("valid")
         inputPassword.classList.remove("unvalid")
         passwordInfo.innerHTML = `<p>Thank you for the entered password</p><a href="https://github.com/VladislavKrs/library-validations">My repositories</a>`
