@@ -1,9 +1,38 @@
-function validate() {
+function validateForm() {
+    const loginValue = document.getElementById('login').value;
+    const emailValue = document.getElementById('email').value;
+    const passwordValue = document.getElementById('password').value;
+    const patternLogin = /[a-zA-Z0-9]+/;
+    const patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    const patternPassword = /^(?=.*\d)\w{3,20}$/m;
+    const minLength = 6;
+    const maxLength = 12;
 
-    // LOGIN
+    if (!validateLogin(loginValue, patternLogin, minLength, maxLength)) {
+        return false;
+    }
+    if (!validateEmail(emailValue, patternEmail)) {
+        return false;
+    }
+    if (!validatePassword(passwordValue, patternPassword)) {
+        return false;
+    }
+
+    return true;
+}
+
+document.getElementById('btn').addEventListener('click', function (e) {
+    e.preventDefault()
+    if (validateForm()) {
+        console.log('ok')
+    }
+});
+// LOGIN
+
+const inputLogin = document.querySelector('#login');
+inputLogin.addEventListener("change", () => {
     const loginVal = document.getElementById('login').value;
     const loginInfo = document.getElementById('info_login');
-    const inputLogin = document.querySelector('#login')
     const patternLogin = /[a-zA-Z0-9]+/;
     const minLength = 6;
     const maxLength = 10;
@@ -22,11 +51,13 @@ function validate() {
         inputLogin.classList.remove("valid")
         loginInfo.innerHTML = `<p>Please enter your login</p>`
     }
+});
 
-    // EMAIL
+// EMAIL
+const inputEmail = document.querySelector('#email')
+inputEmail.addEventListener("change", () => {
     const emailVal = document.getElementById('email').value;
     const emailInfo = document.getElementById('info_email');
-    const inputEmail = document.querySelector('#email')
     const patternEmail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
     if (validateEmail(emailVal, patternEmail)) {
@@ -38,16 +69,18 @@ function validate() {
         inputEmail.classList.remove("valid")
         emailInfo.innerHTML = `<p>Please enter by example index@gmail.com</p>`
     }
-    if (loginVal === "") {
+    if (emailVal === "") {
         inputEmail.classList.remove("unvalid")
         inputEmail.classList.remove("valid")
         emailInfo.innerHTML = `<p>Please enter your email</p>`
     }
+});
 
-    // PASSWORD
+// PASSWORD
+const inputPassword = document.querySelector('#password')
+inputPassword.addEventListener("change", () => {
     const passwordVal = document.getElementById('password').value;
     const passwordInfo = document.getElementById('info_password');
-    const inputPassword = document.querySelector('#password')
     const patternPassword = /[a-zA-Z0-9]+/;
 
     if (validatePassword(passwordVal, patternPassword)) {
@@ -59,12 +92,13 @@ function validate() {
         inputPassword.classList.remove("valid")
         passwordInfo.innerHTML = `<p>Must contain Latin + numbers</p>`
     }
-    if (loginVal === "") {
+    if (passwordVal === "") {
         inputPassword.classList.add("unvalid")
         inputPassword.classList.remove("valid")
         passwordInfo.innerHTML = `<p>Please enter your password</p>`
     }
-}
+});
+
 
 
 
